@@ -18,3 +18,11 @@ body {
     
 
 }
+
+
+.result-section {
+    display: flex;
+    align-items: center;
+    
+
+}

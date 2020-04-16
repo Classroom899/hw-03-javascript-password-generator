@@ -23,7 +23,21 @@ document.getElementById("Generator").addEventListener("click", function (event){
     else {
         // This is where the logic will go for generating a password
 
+    function getRandomLower() {
+
+
+    }
+
+
+    function getRandomUpper() {
+
+
+        
+    }
+
         // Will need a repository of uppercase characters in arrays,
+
+    
 
         // set that array and then generate a random number that will now take that index into the array
 
