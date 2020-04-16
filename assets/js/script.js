@@ -27,6 +27,8 @@ document.getElementById("Generator").addEventListener("click", function (event){
 
         // set that array and then generate a random number that will now take that index into the array
 
-        
+
     }
 })
+
+
