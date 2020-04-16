@@ -24,6 +24,7 @@ document.getElementById("Generator").addEventListener("click", function (event){
         // This is where the logic will go for generating a password
 
     function getRandomLower() {
+        return String.fromCharCode()
 
 
     }
@@ -32,10 +33,12 @@ document.getElementById("Generator").addEventListener("click", function (event){
     function getRandomUpper() {
 
 
-        
+
     }
 
         // Will need a repository of uppercase characters in arrays,
+
+        var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
     
 
