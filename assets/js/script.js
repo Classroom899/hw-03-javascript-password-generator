@@ -24,10 +24,12 @@ document.getElementById("Generator").addEventListener("click", function (event){
         // This is where the logic will go for generating a password
 
     function getRandomLower() {
-        return String.fromCharCode()
+        return String.fromCharCode(104);
 
 
     }
+
+    console.log(Math.floor(Math.random() * 26)); //26 letters to choose from
 
 
     function getRandomUpper() {
