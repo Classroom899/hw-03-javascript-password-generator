@@ -1,3 +1,5 @@
+// Generator functions - Reference Char - http://www.net-comber.com/charset.html
+
 console.log("hello from script.js");
 
 // prompt()
@@ -24,19 +26,19 @@ document.getElementById("Generator").addEventListener("click", function (event){
         // This is where the logic will go for generating a password
 
     function getRandomLower() {
-        return String.fromCharCode(104);
-
-
+        return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
     }
+
+    console.log(getRandomLower());
 
     console.log(Math.floor(Math.random() * 26)); //26 letters to choose from
 
 
     function getRandomUpper() {
-
-
-
+        return String.fromCharCode(Math.floor(Math.random() * 26) + 65)
     }
+
+    console.log(getRandomUpper());
 
         // Will need a repository of uppercase characters in arrays,
 
