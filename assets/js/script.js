@@ -1,4 +1,4 @@
-// Generator functions - Reference Char - http://www.net-comber.com/charset.html
+// Generator functions - Reference Char - http://www.net-comber.com/charset.html // reference this!
 
 console.log("hello from script.js");
 
@@ -23,7 +23,7 @@ document.getElementById("Generator").addEventListener("click", function (event){
         alert("Password needs to be between 8 and 128 characters");
     }
     else {
-        // This is where the logic will go for generating a password
+        // This is where the logic will go for generating a password - the functions
 
     function getRandomLower() {
         return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
@@ -45,6 +45,16 @@ document.getElementById("Generator").addEventListener("click", function (event){
         return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
     }
     console.log(getRandomNumber());
+
+
+    function getRandomSymbol() {
+        var symbols = "!@#$%^&*(){}[]=<>/,.";
+        return symbols [Math.floor(Math.random() * symbols.length)];
+    }
+    console.log(getRandomSymbol());
+
+
+
 
         // Will need a repository of uppercase characters in arrays,
 
