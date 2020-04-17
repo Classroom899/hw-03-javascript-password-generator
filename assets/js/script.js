@@ -40,6 +40,12 @@ document.getElementById("Generator").addEventListener("click", function (event){
 
     console.log(getRandomUpper());
 
+    
+    function getRandomNumber() {
+        return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+    }
+    console.log(getRandomNumber());
+
         // Will need a repository of uppercase characters in arrays,
 
         var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
