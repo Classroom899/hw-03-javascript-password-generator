@@ -21,7 +21,7 @@ function writePassword() {
     if (passwordLength < 8 || passwordLength > 128) {
         alert("Password needs to be between 8 and 128 characters in length");
     } else {
-        var password = generatePassword(); 
+        var password = generatePassword();
         var passwordText = document.querySelector("password");
         passwordText.value = passwords;
     }
