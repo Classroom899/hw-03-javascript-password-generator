@@ -9,6 +9,7 @@ console.log("hello from script.js");
 //DOM elements
 
 document.getElementById("Password-Length");
+
     
 document.getElementById("Generator").addEventListener("click", function (event){
     var checkboxes = {
@@ -28,6 +29,8 @@ document.getElementById("Generator").addEventListener("click", function (event){
     }
     // console.log(checkboxes)
     // console.log(checkboxes.numeric)
+
+    
 
     if (checkboxes.passwordLength < 8 || checkboxes.passwordLength > 128) {
         alert("Password needs to be between 8 and 128 characters");
