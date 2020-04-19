@@ -40,8 +40,12 @@ function generatePassword(length) {
     var criteria = {
         lowercase: lowercase.checked,                 ////////Kept getting unexpected ts(1005) error
         uppercase: uppercase.checked,                 // uppercase: uppercase.checked
-        
+        specialCharacters: specialCharacters.checked,
+        numeric: numeric.checked,
+
     }
+    console.log(criteria);
+    console.log(criteria);
     console.log(criteria);
     console.log(criteria);
     // Generate a list of allowed characters based on criteria
@@ -54,6 +58,14 @@ function generatePassword(length) {
         allowedOptions = allowedOptions + uppercaseOptions;
     }
     allowedOptions = allowedOptions.split("")
+    if(criteria.specialCharacters) {
+        allowedOptions = allowedOptions + specialCharactersOptions;
+    }
+    allowedOptions = allowedOptions.split("")
+    if(criteria.numeric) {
+        allowedOptions = allowedOptions + numeric;
+    }
+    allowedOptions = allowedOptions.split("");
 
     
     // Write a for loop from 0 to less than length
@@ -66,7 +78,19 @@ function generatePassword(length) {
         var character = allowedOptions[Math.floor(Math.random() * (allowedOptions.length + 1))]
         generatedPassword = generatedPassword + character
     };
+    for (var i = 0; i < length; i++) {
+        var character = allowedOptions[Math.floor(Math.random() * (allowedOptions))];
+    };
+    for (var i = 0; i < length; i++) {
+        var numeric = Math.floor(Math.random() * 9);
+    };
+    console.log(num);
+
+    
+
         // Pick a random character from allowed options
+
+    
         // Concatentate that in to generaatedPassword
     // Return final password
     return generatedPassword;
