@@ -8,10 +8,10 @@ var passwordEl = document.getElementById("Password-Length");
 
 // Set the characters below 
 
-var lowercaseOptions = "abcdefghijklmnopqrstuvwxyz"
-var uppercaseOptions = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-var numeric = "123456789"
-var specialCharacters = "!@#$%^&*()"
+var lowercaseOptions = "abcdefghijklmnopqrstuvwxyz";
+var uppercaseOptions = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numeric = "123456789";
+var specialCharacters = "!@#$%^&*()";
 
 function writePassword() {
     var passwordLength = parseInt(passwordEl.value);
@@ -38,7 +38,9 @@ function generatePassword(length) {
     var generatedPassword = "";
     // Get criteria from page
     var criteria = {
-        lowercase: lowercase.checked
+        lowercase: lowercase.checked                 ////////Kept getting unexpected ts(1005) error
+        // uppercase: uppercase.checked
+        
     }
     console.log(criteria);
     // Generate a list of allowed characters based on criteria
@@ -46,7 +48,8 @@ function generatePassword(length) {
     if(criteria.lowercase) {
         allowedOptions = allowedOptions + lowercaseOptions;
     }
-    allowedOptions = allowedOptions.split("") 
+    allowedOptions = allowedOptions.split("")
+    
     // Write a for loop from 0 to less than length
     for (var i = 0; i < length; i++) {
         var character = allowedOptions[Math.floor(Math.random() * (allowedOptions.length - 1))]
@@ -62,3 +65,31 @@ function generatePassword(length) {
 
     // Reference for loop, set a variable to use instead of numbers in my math.randoms
     // for (var 1 = 0; i < )
+
+
+function generatePassword(length) {
+    var generatedPassword = "";
+
+    var criteria = {
+        uppercase: uppercase.checked
+        
+    }
+    console.log(criteria);
+    var allowedOptions = [];
+    if(criteria.uppercase) {
+        allowedOptions = allowedOptions + uppercaseOptions;
+    }
+
+    allowedOptions = allowedOptions.split("")
+    //Write another for loop from 
+    for (var i = 0; i < length; i++) {
+        var character = allowedOptions[Math.floor(Math.random() * (allowedOptions.length - 1))]
+        generatedPassword = generatedPassword + character
+    };
+
+    return generatedPassword;
+
+}
+
+
+    
