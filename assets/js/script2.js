@@ -38,10 +38,11 @@ function generatePassword(length) {
     var generatedPassword = "";
     // Get criteria from page
     var criteria = {
-        lowercase: lowercase.checked                 ////////Kept getting unexpected ts(1005) error
-        // uppercase: uppercase.checked
+        lowercase: lowercase.checked,                 ////////Kept getting unexpected ts(1005) error
+        uppercase: uppercase.checked,                 // uppercase: uppercase.checked
         
     }
+    console.log(criteria);
     console.log(criteria);
     // Generate a list of allowed characters based on criteria
     var allowedOptions = [];
@@ -49,10 +50,20 @@ function generatePassword(length) {
         allowedOptions = allowedOptions + lowercaseOptions;
     }
     allowedOptions = allowedOptions.split("")
+    if(criteria.uppercase) {
+        allowedOptions = allowedOptions + uppercaseOptions;
+    }
+    allowedOptions = allowedOptions.split("")
+
     
     // Write a for loop from 0 to less than length
     for (var i = 0; i < length; i++) {
         var character = allowedOptions[Math.floor(Math.random() * (allowedOptions.length - 1))]
+        generatedPassword = generatedPassword + character
+    };
+
+    for (var i = 0; i < length; i++) {
+        var character = allowedOptions[Math.floor(Math.random() * (allowedOptions.length + 1))]
         generatedPassword = generatedPassword + character
     };
         // Pick a random character from allowed options
@@ -67,29 +78,28 @@ function generatePassword(length) {
     // for (var 1 = 0; i < )
 
 
-function generatePassword(length) {
-    var generatedPassword = "";
 
-    var criteria = {
-        uppercase: uppercase.checked
+//     var generatedPassword = "";
+
+    
         
-    }
-    console.log(criteria);
-    var allowedOptions = [];
-    if(criteria.uppercase) {
-        allowedOptions = allowedOptions + uppercaseOptions;
-    }
+    
+    
+//     var allowedOptions = [];
+//     if(criteria.uppercase) {
+//         allowedOptions = allowedOptions + uppercaseOptions;
+//     }
 
-    allowedOptions = allowedOptions.split("")
-    //Write another for loop from 
-    for (var i = 0; i < length; i++) {
-        var character = allowedOptions[Math.floor(Math.random() * (allowedOptions.length - 1))]
-        generatedPassword = generatedPassword + character
-    };
+//     allowedOptions = allowedOptions.split("")
+//     //Write another for loop from 
+//     for (var i = 0; i < length; i++) {
+//         var character = allowedOptions[Math.floor(Math.random() * (allowedOptions.length - 1))]
+//         generatedPassword = generatedPassword + character
+//     };
 
-    return generatedPassword;
+//     return generatedPassword;
 
-}
+// }
 
 
     
