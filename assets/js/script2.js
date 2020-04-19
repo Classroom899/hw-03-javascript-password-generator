@@ -9,9 +9,9 @@ var passwordEl = document.getElementById("Password-Length");
 // Set the characters below 
 
 var lowercaseOptions = "abcdefghijklmnopqrstuvwxyz"
-//var uppercase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-//var numeric = [1, 2, 3, 4, 5, 6, 7, 8, 9,];
-//var specialCharacters = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
+var uppercaseOptions = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var numeric = "123456789"
+var specialCharacters = "!@#$%^&*()"
 
 function writePassword() {
     var passwordLength = parseInt(passwordEl.value);
